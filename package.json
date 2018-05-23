@@ -1,0 +1,26 @@
+{
+  "name": "drummachine",
+  "version": "1.0.0",
+  "description": "free code camp front end project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Evelinabrink/DrumMachine.git"
+  },
+  "keywords": [
+    "drum",
+    "machine",
+    "javascript",
+    "front",
+    "end"
+  ],
+  "author": "evbrink",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Evelinabrink/DrumMachine/issues"
+  },
+  "homepage": "https://github.com/Evelinabrink/DrumMachine#readme"
+}
