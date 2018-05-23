@@ -1,0 +1,38 @@
+body {
+    background-color:#575C55;
+}
+
+#drumPad {
+    width: 500px;
+    height: 400px;
+    background-color: #343434;
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
+}
+
+.pad {
+    width: 100px;
+    height: 100px;
+    background-color: dimgray;
+    margin: 5px;
+    border-radius: 3%;
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
+.pad:hover {
+    background-color: #a5a5a5;
+}
+
+#padDiv {
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 30px;
+}
+
+
