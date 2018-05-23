@@ -4,8 +4,8 @@ body {
 
 #drumPad {
     width: 500px;
-    height: 400px;
-    background-color: #343434;
+    height: auto;
+    background-color: #2a2a2a;
     display: flex;
     justify-content: center;
     border: 1px solid white;
@@ -23,11 +23,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 .pad:hover {
     background-color: #a5a5a5;
-    background: radial-gradient(#b4b4b4, dimgrey);
+    background: radial-gradient(lightgreen, #137B13);
 }
 
 #padDiv {
@@ -52,6 +54,6 @@ body {
 
 h3 {
     margin: 0;
+    font-family: 'PT Sans', sans-serif;
+    color: #2a2a2a;
 }
-
-
