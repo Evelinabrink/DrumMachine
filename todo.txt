@@ -1,0 +1,5 @@
+TO DO:
+- add icons for all pads
+- connect all pads with sounds
+- fix issue with not being able 
+to play the sound again until it has finished playing.
