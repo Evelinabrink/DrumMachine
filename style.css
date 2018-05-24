@@ -6,7 +6,7 @@ body {
 
 .container {
     width: 700px;
-    background-color: dimgrey;
+    background-color: #1f1f1f;
     border-radius: 3%;
     height: 500px;
     box-shadow: 10px 10px 15px 0px rgba(0,0,0,0.75);
@@ -80,4 +80,18 @@ h3 {
     background-color: green;
     position: relative;
     float: right;
+    margin-right: 10px;
+    padding: 10px 32px;
+    background: radial-gradient(lightgreen, #137B13);
+    border-radius: 3px;
+    box-shadow: 0px 8px 11px 0px rgba(0,0,0,0.75);
+}
+
+.start:hover {
+    background: radial-gradient(red, darkred);
+}
+
+#startPic {
+    width: 20px;
+    height: auto;
 }
