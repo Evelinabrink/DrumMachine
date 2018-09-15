@@ -11,11 +11,11 @@ let audio7 = new Audio('sounds/tink.wav');
 let audio8 = new Audio('sounds/tom.wav');
 
 let sounds = [audio0, audio1, audio2, audio3, audio4, audio5, audio6, audio7, audio8];
-let keys = [81, 87, 69, 82, 65, 83, 68, 70, 90];
+// let keys = [81, 87, 69, 82, 65, 83, 68, 70, 90];
 
 let currentlyPlaying;
 
-// listens for click
+// play sound on click
 for (let i = 0; i < padDiv.children.length; i++) {
   padDiv.children[i].addEventListener('click', function(){
     if (currentlyPlaying != undefined) {
@@ -26,15 +26,24 @@ for (let i = 0; i < padDiv.children.length; i++) {
   });
 }
 
-// listens for key
-window.addEventListener('keydown', function (e) {
-  if (currentlyPlaying != undefined) {
-    currentlyPlaying.load();
-  }
-  currentlyPlaying = sounds[keys.indexOf(e.which)];
-  sounds[keys.indexOf(e.which)].play();
-})
+// remove transition
+function removeTransition(e) {
+  if (e.propertyName !== 'box-shadow') return;
+  e.target.classList.remove('playing');
+}
 
+// play sound on key down
+function playSound(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+  if (!audio) return;
 
-// add green color for a split second if key is pressed. 
-// add error handling for eventlistener 
+  key.classList.add('playing');
+  audio.currentTime = 0;
+  audio.play();
+}
+
+const keys = Array.from(document.querySelectorAll('.key'));
+console.log(keys);
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);

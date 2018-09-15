@@ -55,6 +55,13 @@ body {
     box-shadow: 0 0 40px red;
 }
 
+.playing {
+    background-color: #a5a5a5;
+    background: radial-gradient(lightgreen, #137B13);
+    box-shadow: 0 0 40px red;
+    transition: all .07s ease;
+}
+
 #padDiv {
     display: flex;
     justify-content: space-between;
@@ -83,7 +90,7 @@ h3 {
     color: #2a2a2a;
 }
 
-.start {
+#start {
     border: none;
     background-color: green;
     position: relative;
@@ -96,8 +103,9 @@ h3 {
     box-shadow: 0px 8px 11px 0px rgba(0,0,0,0.75);
 }
 
-.start:hover {
+#start:hover {
     background: radial-gradient(red, darkred);
+    cursor: pointer;
 }
 
 #startPic {
