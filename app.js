@@ -1,4 +1,16 @@
 let padDiv = document.querySelector('#padDiv');
+let start = 0;
+
+let startButton = document.querySelector('#start');
+
+startButton.addEventListener('click', function(){
+  if (start === 0) {
+    start++;
+  } else if (start > 0) {
+    start = 0;
+  }
+  console.log(start);
+})
 
 let audio0 = new Audio('sounds/clap.wav');
 let audio1 = new Audio('sounds/boom.wav');
@@ -18,6 +30,9 @@ let currentlyPlaying;
 // play sound on click
 for (let i = 0; i < padDiv.children.length; i++) {
   padDiv.children[i].addEventListener('click', function(){
+    if (start === 0) {
+      return false;
+    }
     if (currentlyPlaying != undefined) {
       currentlyPlaying.load();
     }
@@ -34,6 +49,9 @@ function removeTransition(e) {
 
 // play sound on key down
 function playSound(e) {
+  if (start === 0) {
+    return false;
+  }
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
   const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
   if (!audio) return;
