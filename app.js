@@ -2,16 +2,26 @@ let padDiv = document.querySelector('#padDiv');
 let start = 0;
 
 let startButton = document.querySelector('.start');
+let track = document.querySelector('#track');
 
 startButton.addEventListener('click', function(){
   // turning on drum machine
   if (start === 0) {
     start++;
     startButton.classList.add('on');
+
     // add hover on pads
     for (let i = 0; i < padDiv.children.length; i++) {
       padDiv.children[i].classList.add('padon');
     }
+
+    // turn on display
+    let h4 = document.createElement('h4');
+    let text = document.createTextNode('01');
+    h4.appendChild(text);
+
+    track.appendChild(h4);
+
     // turn off drum machine
   } else if (start > 0) {
     start = 0;
@@ -20,6 +30,9 @@ startButton.addEventListener('click', function(){
     for (let i = 0; i < padDiv.children.length; i++) {
       padDiv.children[i].classList.remove('padon');
     }
+
+    // turn off display
+    track.removeChild(track.childNodes[1]);
   }
   console.log(start);
 })
