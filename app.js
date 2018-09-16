@@ -1,13 +1,15 @@
 let padDiv = document.querySelector('#padDiv');
 let start = 0;
 
-let startButton = document.querySelector('#start');
+let startButton = document.querySelector('.start');
 
 startButton.addEventListener('click', function(){
   if (start === 0) {
     start++;
+    startButton.classList.add('on');
   } else if (start > 0) {
     start = 0;
+    startButton.classList.remove('on');
   }
   console.log(start);
 })
