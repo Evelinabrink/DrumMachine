@@ -4,12 +4,22 @@ let start = 0;
 let startButton = document.querySelector('.start');
 
 startButton.addEventListener('click', function(){
+  // turning on drum machine
   if (start === 0) {
     start++;
     startButton.classList.add('on');
+    // add hover on pads
+    for (let i = 0; i < padDiv.children.length; i++) {
+      padDiv.children[i].classList.add('padon');
+    }
+    // turn off drum machine
   } else if (start > 0) {
     start = 0;
     startButton.classList.remove('on');
+    // remove hover on pads
+    for (let i = 0; i < padDiv.children.length; i++) {
+      padDiv.children[i].classList.remove('padon');
+    }
   }
   console.log(start);
 })

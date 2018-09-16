@@ -61,7 +61,7 @@ h1 {
     box-sizing: border-box;
 }
 
-.pad:hover {
+.padon:hover {
     background-color: #a5a5a5;
     background: radial-gradient(lightgreen, #137B13);
     box-shadow: 0 0 40px red;
